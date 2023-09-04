@@ -1,0 +1,420 @@
+body .searchdiv{
+    display: grid;
+place-items:  center;
+color: rgba(109, 109, 109, 0.767);
+font-size: 10px;
+
+
+
+}
+body .searchdiv #search{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    z-index: 1;
+    
+}
+body{
+    background-color: #f0e8dfd5;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+ header h1{
+    width: 300px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-right: 0px;
+}
+ header{
+    max-width: 100%;
+ }
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap'); */
+
+/*-- VARIABLES CSS--*/
+/*Colores*/
+:root{
+    --first-color: #ffffff;
+    --second-color: #ffffff;
+    --third-color: #ffffff;
+    --accent-color: #ffffff;
+    --dark-color: #ffffff;
+    
+}
+
+/*Tipografia responsive*/
+:root{
+    --body-font: 'Open Sans';
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --smaller-font-size: 0.75rem;
+}
+@media screen and (min-width: 768px){
+    :root{
+        --h1-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*-- BASE --*/
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+
+/*-- LAYAOUT --*/
+.main {
+    padding: 2rem 0;
+}
+.bd-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*-- PAGES --*/
+
+/*-- COMPONENT --*/
+.card{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 50px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-size: 17px;
+}
+article:nth-child(1){
+    background-color: var(--first-color);
+}
+article:nth-child(2){
+    background-color: var(--second-color);
+}
+article:nth-child(3){
+    background-color: var(--first-color);
+}
+article:nth-child(4){
+    background-color: var(--second-color);
+}
+article:nth-child(5){
+    background-color: var(--first-color);
+}
+article:nth-child(6){
+    background-color: var(--second-color);
+}
+article:nth-child(7){
+    background-color: var(--first-color);
+}
+article:nth-child(8){
+    background-color: var(--second-color);
+}
+.card__img img{
+    width: 180px;
+    height: auto;
+    
+    border-radius: 15px;
+    max-width: 180px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+.card .card__name p{
+
+ 
+    
+    text-align: center;
+    background-color: var(--dark-color);
+    color: rgb(99, 94, 94);
+    font-weight: bold;
+}
+
+/*Move left*/
+.card:hover{
+    box-shadow: 0 .5rem 1rem #e9dab1;
+   cursor: pointer; 
+}
+.card:hover .card__name{
+    left: 0;
+}
+
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 1200px){
+
+
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  font-size: 40px;
+  }
+  
+  .popup {
+
+    background:#aaaaaa;
+  
+    padding: 20px;
+    border-radius: 5px;
+    width: 450px;
+    
+    
+    max-width: 450px;
+     position: relative;
+    
+    
+    font-size: 17px;
+    
+    color: #fffcfcbb;
+    
+    
+    
+    
+  }
+  
+  .popup p {
+    margin-top: 0;
+    color: #e6dddd;
+    font-family: Tahoma, Arial, sans-serif;
+    
+  
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  
+  }
+  .popup .close:hover {
+    color: #868686;
+  
+  }
+  .popup .content {
+      max-height: 30%;    
+      overflow: auto;
+      
+      
+    }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 80%;
+    }
+    .popup{
+  
+      width: 80%; 
+    }
+  }
+  
+  
+  body .popup .content  a {
+  border:1px solid #fff;
+  border-radius:7px;
+  background:#CCDFDF;
+
+  
+  
+  
+  }
+  
+  body .popup  .content  a:hover {
+    background: #fff;
+  width: 103px;
+  height:31px;
+  }
+
+
+
+
+
+    
+
+
+.popup video{
+    max-width: 100%;
+    height: auto;
+   margin-top: 10%; 
+   margin-bottom: 10%;
+   border-radius: 8px;
+   border: solid 2px rgba(49, 49, 49, 0.712);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup img{
+    width: 410px;
+    height: 239px;
+    margin-top: 41px;
+    border: solid 2px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+html{
+    scroll-padding: 10rem;
+
+}
+
+
+img :hover{
+    cursor: pointer;
+}
+
+
+
+.note  p{
+    color: #868686;
+    width: 200px;
+    height: auto;
+}
+
+
+.card__img img{
+   border: solid 2px #33333383; 
+}
+
+
+
+
+.popup button {
+    margin-top: 10px;
+    margin-bottom: 10;
+    width: 13%;
+    border: solid 1px;
+    background-color: #e0e0e0;
+    color: #161616;
+    border-radius: 2px;
+    
+
+}
+
+
+.popup button:hover{
+    cursor: pointer;
+   background-color:  #636363;
+   color: #ffffff;
+   
+}
+
+
+.popup .content {
+    color: #333;
+font-family: monospace ;
+font-size: 14px;
+   
+}
+.popup .content input{
+    margin-top: 10px;
+}
+
+html{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+
+
+
+@media screen and (max-width: 1361px){
+
+    body{
+        
+        display: none;
+    }
+}   
+@media screen and (max-height: 572px){
+
+    body{
+        
+        display: none;
+    }
+}

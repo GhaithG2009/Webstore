@@ -404,14 +404,14 @@ html{
 
 
 
-@media screen and (max-width: 1361px){
+@media screen and (max-width: 900px){
 
     body{
         
         display: none;
     }
 }   
-@media screen and (max-height: 572px){
+@media screen and (max-height: 400px){
 
     body{
         

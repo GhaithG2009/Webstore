@@ -420,6 +420,6 @@ html{
 }
 textarea{
     resize: none;
-    width: 25px;
-    height: 100px;
+    width: 250px;
+    height: 30px;
 }

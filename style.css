@@ -391,6 +391,7 @@ font-size: 14px;
 }
 .popup .content input{
     margin-top: 10px;
+    width: 180px;
 }
 
 html{
